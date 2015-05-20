@@ -16,11 +16,13 @@ class TacheType extends AbstractType
     {
         $builder
             ->add('libelle', 'text', array(
-    'label'  => 'Ajouter une chose à faire :',))
+    'label'  => 'Nom de la tâche :',))
             ->add('description', 'text', array(
-    'label'  => 'Description de la chose à faire :',))
-            ->add('date', 'date', array(
-    'label'  => 'Faire au plus tard :',))
+    'label'  => 'Description de la tâche :',))
+ 
+  ->add('date', 'datetime', array(
+    'label'  => 'Faire au plus tard :',
+    'data' => new \DateTime('now')))
         ;
     }
     

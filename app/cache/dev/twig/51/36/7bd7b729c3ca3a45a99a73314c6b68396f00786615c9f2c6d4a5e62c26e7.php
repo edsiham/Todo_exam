@@ -31,19 +31,20 @@ class __TwigTemplate_51367bd7b729c3ca3a45a99a73314c6b68396f00786615c9f2c6d4a5e62
         ";
         // line 6
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 7
+        // line 9
         echo "        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\" />
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     </head>
     <body>
         ";
-        // line 10
+        // line 13
         $this->displayBlock('body', $context, $blocks);
-        // line 11
+        // line 14
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 12
+        // line 15
         echo "    </body>
 </html>
 ";
@@ -58,14 +59,19 @@ class __TwigTemplate_51367bd7b729c3ca3a45a99a73314c6b68396f00786615c9f2c6d4a5e62
     // line 6
     public function block_stylesheets($context, array $blocks = array())
     {
+        // line 7
+        echo "        <link rel=\"stylesheet\" href=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/main/css/style.css"), "html", null, true);
+        echo "\" type=\"text/css\" media=\"all\" />
+        ";
     }
 
-    // line 10
+    // line 13
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 11
+    // line 14
     public function block_javascripts($context, array $blocks = array())
     {
     }
@@ -82,6 +88,6 @@ class __TwigTemplate_51367bd7b729c3ca3a45a99a73314c6b68396f00786615c9f2c6d4a5e62
 
     public function getDebugInfo()
     {
-        return array (  69 => 11,  64 => 10,  59 => 6,  53 => 5,  47 => 12,  44 => 11,  42 => 10,  35 => 7,  33 => 6,  29 => 5,  23 => 1,);
+        return array (  75 => 14,  70 => 13,  63 => 7,  60 => 6,  54 => 5,  48 => 15,  45 => 14,  43 => 13,  35 => 9,  33 => 6,  29 => 5,  23 => 1,);
     }
 }

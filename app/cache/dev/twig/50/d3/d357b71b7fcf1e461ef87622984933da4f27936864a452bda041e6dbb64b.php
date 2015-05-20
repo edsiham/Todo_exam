@@ -36,44 +36,40 @@ class __TwigTemplate_50d3d357b71b7fcf1e461ef87622984933da4f27936864a452bda041e6d
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>TODO.COM</h1>
-    <p>
-        ";
+        echo "<div class=\"centre\">
+       <center><h1>Todo.com</h1></center>
+       <h2>";
         // line 6
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "libelle", array()), "html", null, true);
-        echo " :<br>
-        A faire avant le ";
-        // line 7
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "date", array()), "d-m-Y H:i:s"), "html", null, true);
-        echo "
-        
-    </p>
-
-    
-
-        <ul class=\"record_actions\">
-    <li>
+        echo " :</h2> <p>";
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "description", array()), "html", null, true);
+        echo "</p>
+      
+       <p>A faire avant le: </p> <h3>";
+        // line 8
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "date", array()), "d-m-Y / H:i:s"), "html", null, true);
+        echo "</h3>
         <a href=\"";
-        // line 15
-        echo $this->env->getExtension('routing')->getPath("tache");
-        echo "\">
-            Retour
-        </a>
-    </li>
-    <li>
-        <a href=\"";
-        // line 20
+        // line 9
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("tache_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id", array()))), "html", null, true);
         echo "\">
-            Modifier
+           <img src=";
+        // line 10
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/main/img/edit.png"), "html", null, true);
+        echo ">
         </a>
-    </li>
-    <li>";
-        // line 24
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
-        echo "</li>
-</ul>
-    <i>CopyRight...</i>
+    
+     <a href=\"";
+        // line 13
+        echo $this->env->getExtension('routing')->getPath("tache");
+        echo "\">
+             <img src=";
+        // line 14
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/main/img/back.png"), "html", null, true);
+        echo ">
+     </a><br><br>
+     <p font-size=\"10px\"> CopyRight...</p> </div>
+   
 ";
     }
 
@@ -89,6 +85,6 @@ class __TwigTemplate_50d3d357b71b7fcf1e461ef87622984933da4f27936864a452bda041e6d
 
     public function getDebugInfo()
     {
-        return array (  73 => 24,  66 => 20,  58 => 15,  47 => 7,  43 => 6,  39 => 4,  36 => 3,  11 => 1,);
+        return array (  68 => 14,  64 => 13,  58 => 10,  54 => 9,  50 => 8,  43 => 6,  39 => 4,  36 => 3,  11 => 1,);
     }
 }

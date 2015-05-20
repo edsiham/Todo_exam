@@ -36,15 +36,16 @@ class __TwigTemplate_27fff1ec90edd6907606c93be654215f7b9a75f9cf0b43bf433f1b6d060
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>TODO.COM</h1>
-    <p> A faire </p> :
+        echo "<div class=\"centre\">
+       <center><h1>Todo.com</h1></center>
+       <h2>A faire :</h2><br>
     <ul> 
         ";
-        // line 7
+        // line 8
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : $this->getContext($context, "entities")));
         foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
-            // line 8
+            // line 9
             echo "            <li>  <a href=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("tache_show", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
             echo "\">";
@@ -56,17 +57,17 @@ class __TwigTemplate_27fff1ec90edd6907606c93be654215f7b9a75f9cf0b43bf433f1b6d060
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 11
+        // line 12
         echo "        
 </ul>
         
-        <p> <a href=\"";
-        // line 14
+         <a href=\"";
+        // line 15
         echo $this->env->getExtension('routing')->getPath("tache_new");
-        echo "\"></p>
-                Ajouter une tache
-            
-    
+        echo "\">  <img src=";
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/main/img/icone.png"), "html", null, true);
+        echo "></a>
+            </div>
     ";
     }
 
@@ -82,6 +83,6 @@ class __TwigTemplate_27fff1ec90edd6907606c93be654215f7b9a75f9cf0b43bf433f1b6d060
 
     public function getDebugInfo()
     {
-        return array (  65 => 14,  60 => 11,  48 => 8,  44 => 7,  39 => 4,  36 => 3,  11 => 1,);
+        return array (  66 => 15,  61 => 12,  49 => 9,  45 => 8,  39 => 4,  36 => 3,  11 => 1,);
     }
 }

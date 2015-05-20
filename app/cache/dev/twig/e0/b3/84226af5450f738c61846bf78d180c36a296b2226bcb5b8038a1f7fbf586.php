@@ -36,23 +36,28 @@ class __TwigTemplate_e0b384226af5450f738c61846bf78d180c36a296b2226bcb5b8038a1f7f
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>TODO.COM</h1>
-
-    ";
-        // line 6
+        echo "<div class=\"centre\">
+       <center><h1>Ajouter tâche</h1></center>
+ <div id=\"notreformulaire\">
+      ";
+        // line 7
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form');
-        echo "
+        echo "</div>
 
-        <ul class=\"record_actions\">
-    <li>
+       <br><br>
+   
         <a href=\"";
-        // line 10
+        // line 11
         echo $this->env->getExtension('routing')->getPath("tache");
         echo "\">
-            Retour
-        </a>
-    </li>
-</ul>
+             <img src=";
+        // line 12
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/main/img/back.png"), "html", null, true);
+        echo ">
+     </a>
+    
+   
+        </ul></div>
 ";
     }
 
@@ -68,6 +73,6 @@ class __TwigTemplate_e0b384226af5450f738c61846bf78d180c36a296b2226bcb5b8038a1f7f
 
     public function getDebugInfo()
     {
-        return array (  50 => 10,  43 => 6,  39 => 4,  36 => 3,  11 => 1,);
+        return array (  55 => 12,  51 => 11,  44 => 7,  39 => 4,  36 => 3,  11 => 1,);
     }
 }

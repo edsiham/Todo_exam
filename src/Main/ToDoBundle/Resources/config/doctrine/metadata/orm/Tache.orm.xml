@@ -6,6 +6,6 @@
     </id>
     <field name="libelle" type="string" column="libelle" length="20" nullable="false"/>
     <field name="description" type="text" column="description" nullable="false"/>
-    <field name="date" type="date" column="date" nullable="false"/>
+    <field name="date" type="datetime" column="date" nullable="false"/>
   </entity>
 </doctrine-mapping>

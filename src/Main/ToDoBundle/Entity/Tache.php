@@ -3,7 +3,7 @@
 namespace Main\ToDoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Tache
  *
@@ -38,8 +38,12 @@ class Tache
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="date", type="date", nullable=false)
+     * @ORM\Column(name="date", type="datetime", nullable=false)
+     * @Assert\GreaterThanOrEqual("today")
      */
+
+
+
     private $date;
 
 
