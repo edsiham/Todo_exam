@@ -28,11 +28,11 @@ div.centre {
     position:absolute;
     left: 50%;
     top: 50%;
-    width: auto;
+    width: 400px;
     height: auto;
     margin-left: -200px; /* Cette valeur doit être la moitié négative de la valeur du width */
     margin-top: -200px; /* Cette valeur doit être la moitié négative de la valeur du height */
-    padding: 70px 70px 70px;
+    padding: 10px 10px 10px 20px;
 }
 img{
     width: 35px;
